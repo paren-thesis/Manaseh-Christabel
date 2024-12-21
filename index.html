@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wedding Countdown</title>
+  <title>Wedding Countdown Manasseh 💕 Christabel</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto+Mono:wght@700&display=swap');
 
@@ -16,31 +16,87 @@
       align-items: center;
       flex-direction: column;
       height: 100vh;
-      background: #f3f3f3;
+      overflow: hidden;
+      background: linear-gradient(135deg, #00594b, #183c2e);
+      color: #fff;
     }
 
     h1 {
       font-family: 'Great Vibes', cursive;
       font-size: 3rem;
       margin: 0;
-      color: #2b6777;
+      color: #ffe000;
+      z-index: 10;
     }
 
     .countdown {
       font-family: 'Roboto Mono', monospace;
       font-size: 4rem;
       margin-top: 20px;
-      color: #2d6187;
+      color: #ff9f00;
+      z-index: 10;
     }
 
     footer {
       margin-top: 50px;
       font-size: 1rem;
-      color: #555;
+      color: #fff;
+      z-index: 10;
     }
+
+    .hearts {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .heart {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background: #ffe000;
+      clip-path: polygon(50% 0%, 61% 9%, 75% 9%, 86% 22%, 86% 38%, 76% 51%, 50% 80%, 24% 51%, 14% 38%, 14% 22%, 25% 9%, 39% 9%);
+      animation: float 5s infinite ease-in-out;
+      opacity: 0.7;
+    }
+
+    .heart:nth-child(2) { background: #ff9f00; }
+    .heart:nth-child(3) { background: #ffc300; }
+    .heart:nth-child(4) { background: #ffd500; }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) scale(0.5) rotate(0deg);
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-10vh) scale(1) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    .heart:nth-child(1) { left: 10%; animation-delay: 0s; }
+    .heart:nth-child(2) { left: 25%; animation-delay: 2s; }
+    .heart:nth-child(3) { left: 50%; animation-delay: 1s; }
+    .heart:nth-child(4) { left: 75%; animation-delay: 3s; }
+    .heart:nth-child(5) { left: 90%; animation-delay: 0.5s; }
   </style>
 </head>
 <body>
+  <div class="hearts">
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+  </div>
   <h1>Manasseh Gbengor & Christabel Nartey</h1>
   <div class="countdown" id="countdown">Loading...</div>
   <footer>
@@ -70,4 +126,3 @@
   </script>
 </body>
 </html>
-￼Enter
